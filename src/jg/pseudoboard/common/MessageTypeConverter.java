@@ -5,7 +5,7 @@ public class MessageTypeConverter {
 	public enum MessageType {
 		DISCONNECT, LOGIN_EXISTING_USER, LOGIN_NEW_USER,
 		NEW_CANVAS, OPEN_CANVAS, CANVAS_LIST, USER_LIST,
-		LOGIN_SUCCESS, LOGIN_FAIL,
+		LOGIN_SUCCESS, LOGIN_FAIL, NEW_CANVAS_FAIL,
 		NONE;
 	}
 	
@@ -31,6 +31,8 @@ public class MessageTypeConverter {
 			return MessageType.LOGIN_SUCCESS;
 		case 8:
 			return MessageType.LOGIN_FAIL;
+		case 9:
+			return MessageType.NEW_CANVAS_FAIL;
 		default:
 			break;
 		}
@@ -57,6 +59,8 @@ public class MessageTypeConverter {
 			return 7;
 		case LOGIN_FAIL:
 			return 8;
+		case NEW_CANVAS_FAIL:
+			return 9;
 		case NONE:
 			return -1;
 		default:
