@@ -6,7 +6,7 @@ public class MessageTypeConverter {
 		DISCONNECT, LOGIN_EXISTING_USER, LOGIN_NEW_USER,
 		NEW_CANVAS, OPEN_CANVAS, CANVAS_LIST, USER_LIST,
 		LOGIN_SUCCESS, LOGIN_FAIL, NEW_CANVAS_FAIL, SAVE_CANVAS,
-		NONE;
+		SHARE_CANVAS, NONE;
 	}
 	
 	public static MessageType getMessageType(int i) {
@@ -35,6 +35,8 @@ public class MessageTypeConverter {
 			return MessageType.NEW_CANVAS_FAIL;
 		case 10:
 			return MessageType.SAVE_CANVAS;
+		case 11:
+			return MessageType.SHARE_CANVAS;
 		default:
 			break;
 		}
@@ -65,6 +67,8 @@ public class MessageTypeConverter {
 			return 9;
 		case SAVE_CANVAS:
 			return 10;
+		case SHARE_CANVAS:
+			return 11;
 		case NONE:
 			return -1;
 		default:
